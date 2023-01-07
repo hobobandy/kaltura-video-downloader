@@ -54,7 +54,7 @@ if __name__ == "__main__":
     # https://streaming.video.ubc.ca/ ........  a6rb/name/a.mp4
     # https://kaltura.com/.../name/a.mp4/seg-12-v1-a1.ts?Policy=...&Key-Pair-Id=...
     parser = argparse.ArgumentParser(description='Download and stitch Kaltura videos')
-    parser.add_argument('-url', action='store', dest='url', default=None, help='Wrap in double-quotes - URL ending in .../a.mp4/seg-1-v1-a1.ts - include all parts such as ?Policy=...&Signature=...&Key-Pair-Id=...')
+    parser.add_argument('-url', action='store', dest='url', required=True, default=None, help='Wrap in double-quotes - URL ending in .../a.mp4/seg-1-v1-a1.ts - include all parts such as ?Policy=...&Signature=...&Key-Pair-Id=...')
     parser.add_argument('-output', action='store', dest='output', default="kaltura_vid.mp4", help='Output file name (default: kaltura_vid.mp4)')
 
     args = parser.parse_args()
